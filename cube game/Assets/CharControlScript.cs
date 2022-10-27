@@ -22,7 +22,11 @@ public class CharControlScript : MonoBehaviour
         {
             transform.position += transform.forward * Time.deltaTime * playerSpeed;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.position -= transform.forward * Time.deltaTime * playerSpeed;
+        }
+            if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.up, -turningSpeed * Time.deltaTime);
         }
@@ -38,7 +42,7 @@ public class CharControlScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.position += transform.up * Time.deltaTime * 400;
+            transform.position += transform.up * Time.deltaTime * 100;
         }
 
     }

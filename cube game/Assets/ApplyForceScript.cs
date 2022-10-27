@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class ApplyForceScript : MonoBehaviour
@@ -16,6 +17,10 @@ public class ApplyForceScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ;
+        {
+
+        }
       
         
     }
@@ -27,14 +32,16 @@ public class ApplyForceScript : MonoBehaviour
         if (objectHitHealth)
         {
             print("Found Health script in object hit");
-            objectHitHealth.takeDamage(3);
+            objectHitHealth.takeDamage(50);
 
             int ObjectsMaxHealth = objectHitHealth.whatsYourMaxHealth();
             if (ObjectsMaxHealth > 100)
                 objectHitHealth.takeDamage(100);
+            
         }
         else
         {
+
             print("Did'nt find Health script in object hit");
         }
     }

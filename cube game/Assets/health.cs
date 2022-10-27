@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public class health : MonoBehaviour
@@ -17,8 +18,7 @@ public class health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("h"))
-            takeDamage(12);
+  
 
     }
 
@@ -27,8 +27,11 @@ public class health : MonoBehaviour
     {
         CHP -= damage;
         print("Ouch you hurt me my health is now " + CHP);
-    }
 
+        if(CHP <= 0)
+            Destroy(gameObject);
+
+    }
     internal int whatsYourMaxHealth()
     {
         return MHP;
