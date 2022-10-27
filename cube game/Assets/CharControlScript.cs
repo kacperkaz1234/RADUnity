@@ -7,16 +7,20 @@ public class CharControlScript : MonoBehaviour
     private float turningSpeed = 180;
     public Transform cubetemplate;
     private float playerSpeed = 15.0f;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+
+
         // s = u t   s- distance  = u (velocity) * t (time)
         if (Input.GetKey(KeyCode.W))
         {
