@@ -7,7 +7,7 @@ public class health : MonoBehaviour
 {
 
     int CHP;
-    public int MHP = 50;
+    public int MHP = 100;
 
     // Start is called before the first frame update
     void Start()
