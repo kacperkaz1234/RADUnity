@@ -7,7 +7,7 @@ public class health : MonoBehaviour
 {
 
     int CHP;
-    public int MHP = 100;
+    public int MHP = 50;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +30,7 @@ public class health : MonoBehaviour
 
         if(CHP <= 0)
             Destroy(gameObject);
+        killsscript.instance.AddPoint();
 
     }
     internal int whatsYourMaxHealth()

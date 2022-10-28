@@ -32,12 +32,12 @@ public class CharControlScript : MonoBehaviour
         }
             if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.up, -turningSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.up, -turningSpeed * Time.deltaTime * 0.5f);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(Vector3.down, -turningSpeed * Time.deltaTime);
+            transform.Rotate(Vector3.down, -turningSpeed * Time.deltaTime * 0.5f);
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
