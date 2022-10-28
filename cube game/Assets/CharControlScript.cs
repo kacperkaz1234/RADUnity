@@ -7,7 +7,8 @@ public class CharControlScript : MonoBehaviour
     private float turningSpeed = 180;
     public Transform cubetemplate;
     private float playerSpeed = 15.0f;
-   
+    private float playerSprint = 25.0f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +47,11 @@ public class CharControlScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            transform.position += transform.up * Time.deltaTime * 100;
+            transform.position += Vector3.up * Time.deltaTime * 250;
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            transform.position += transform.forward * Time.deltaTime * playerSprint;
         }
 
     }
